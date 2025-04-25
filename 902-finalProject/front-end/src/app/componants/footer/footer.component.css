@@ -1,0 +1,51 @@
+/* Footer Styling */
+.footer {
+  background-color: #f9f9f9; /* light background */
+  color: #8080ff; /* default text color */
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  padding: 60px 0 30px;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Make all links default to #8080ff */
+.footer a {
+  color: #8080ff;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+/* Hover effect */
+.footer a:hover {
+  text-decoration: underline;
+  color: #6666ff;
+}
+
+/* Make specific names gold */
+.footer a[href*="eslam.khder"],
+.footer a[href*="moataz.habeb"],
+.footer a:contains("Restaurant") {
+  color: gold;
+}
+
+/* Ensure they stay gold on hover too */
+.footer a[href*="eslam.khder"]:hover,
+.footer a[href*="Moataz Habeb"]:hover,
+.footer a:contains("Restaurant"):hover {
+  color: goldenrod;
+}
+
+/* Optional separator line */
+.footer .copyright {
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  padding-top: 20px;
+  font-size: 15px;
+  opacity: 0.9;
+}
+
+/* Responsive alignment */
+@media (max-width: 767px) {
+  .footer .text-md-start {
+    text-align: center !important;
+  }
+}

@@ -1,0 +1,113 @@
+.bon-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.8rem; /* Smaller font size */
+  color: #8080ff;
+  letter-spacing: 1px;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: center;
+}
+
+.bon-title i {
+  font-size: 1.2em;
+  color: #8080ff;
+  margin-right: 0.5rem;
+}
+.nav-item.nav-link {
+  color: #8080ff; /* Set color */
+}
+
+.nav-item.nav-link a {
+  color: #8080ff; /* Set color for anchor tags inside nav items */
+}
+.nav-item dropdown {
+  color: #8080ff; /* Set color */
+}
+
+.nav-item.dropdown .dropdown-toggle {
+  color: #8080ff; /* Set color for dropdown toggle */
+}
+
+.nav-item.dropdown .dropdown-item {
+  color: #8080ff; /* Set color for dropdown items */
+}
+.nav-link.dropdown-toggle {
+  color: #8080ff !important; /* Set text color */
+}
+
+/* Set background color for the dropdown menu */
+.dropdown-menu {
+  background-color: #8080ff !important; /* Set background color */
+}
+
+/* Set text color for items inside the dropdown menu */
+.dropdown-item {
+  color: white !important; /* Change the text color to white */
+}
+
+/* Set color for the dropdown toggle (Actions link) */
+.nav-item .nav-link.dropdown-toggle {
+  color: #8080ff !important; /* Set text color */
+}
+
+/* Set background color for the dropdown menu */
+.nav-item .dropdown-menu {
+  background-color: #8080ff !important; /* Set background color */
+  border: none; /* Remove the default border */
+}
+
+/* Set text color for items inside the dropdown menu */
+.nav-item .dropdown-item {
+  color: white !important; /* Ensure white text color for items */
+}
+
+/* Remove the default hover color (orange) and set it to a custom color */
+.nav-item .dropdown-item:hover,
+.nav-item .dropdown-item:focus {
+  color: white !important; /* Text color stays white */
+  background-color: #6666cc !important; /* Set a darker shade for hover */
+}
+
+/* Set active state color for items when clicked */
+.nav-item .dropdown-item.active,
+.nav-item .dropdown-item:active {
+  background-color: #6666cc !important; /* Set active state background */
+  color: white !important; /* Keep text white when active */
+}
+
+/* Ensure the dropdown is not using the default Bootstrap styles */
+.nav-item .dropdown-toggle:focus {
+  outline: none !important; /* Remove focus outline to maintain custom styling */
+  box-shadow: none !important; /* Remove box-shadow */
+}
+/* LOgout */
+.logout-btn {
+  display: inline-block;
+  padding: 10px 20px;
+  font-size: 18px;
+  color: #8080ff;  /* Original text color */
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer; /* Shows hand cursor when hovered */
+  transition: color 0.3s ease; /* Smooth transition for color change */
+}
+
+.logout-btn:hover {
+  color: #5c5cd6;  /* Darker shade of the original color on hover */
+}
+/* Make the link look clickable */
+.clickable-link {
+  cursor: pointer;
+  color: #8080ff;
+  font-weight: 500;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+/* On hover, change the style */
+.clickable-link:hover {
+  color: #5a5aff;
+  font-weight: 600;
+  text-decoration: underline;
+  letter-spacing: 0.5px;
+}

@@ -1,0 +1,175 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&family=Roboto:wght@400;500&display=swap');
+
+/* Body Font */
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: #f5f5f5;
+}
+/* Team Section Styling */
+.team-title {
+  color: grey;
+  position: relative;
+  display: inline-block;
+  font-family: 'ff-secondary', sans-serif; /* Match your font */
+  font-weight: normal;
+  text-transform: uppercase; /* Optional: if you want the small title in uppercase */
+  letter-spacing: 1px;
+  margin-bottom: 15px;
+}
+
+.team-title::before,
+.team-title::after {
+  content: '';
+  position: absolute;
+  height: 2px;
+  width: 30px;
+  background: #5c5cd6;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.team-title::before {
+  left: -40px;
+}
+
+.team-title::after {
+  right: -40px;
+}
+
+.team-heading {
+  color: #5c5cd6;
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  text-transform: capitalize; /* Optional styling */
+}
+
+/* Hero Section */
+.hero-header {
+  background-color: #343a40;
+  padding: 80px 0;
+}
+
+.hero-header h1 {
+  font-family: 'Poppins', sans-serif;
+  color: #fff;
+}
+
+/* Section Title */
+.section-title {
+  font-family: 'Poppins', sans-serif;
+  color: #007bff;
+}
+
+/* Team Cards */
+.team-item {
+  background-color: #f8f9fa;
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.team-item:hover {
+  transform: translateY(-10px);
+}
+
+.team-image {
+  border: 4px solid hsl(0, 0%, 47%);
+  padding: 5px;
+  transition: transform 0.3s ease;
+}
+
+.team-item:hover .team-image img {
+  transform: scale(1.05);
+}
+
+.team-item h5 {
+  font-family: 'Poppins', sans-serif;
+  color: #333;
+}
+
+.team-item small {
+  font-family: 'Roboto', sans-serif;
+  color: #555;
+}
+
+/* Social Media Buttons */
+.btn {
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.btn:hover {
+  transform: translateY(-5px);
+}
+
+.btn-primary {
+  color: white;
+}
+
+.btn {
+  transition: transform 0.3s ease, background-color 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  font-size: 18px;
+}
+
+.btn:hover {
+  transform: translateY(-5px);
+}
+
+/* Facebook Button Design */
+.btn-primary.facebook {
+  background-color: #1877F2; /* Real Facebook blue color */
+  color: white;
+  border: none;
+}
+
+.btn-primary.facebook i {
+  font-size: 20px; /* Adjust icon size */
+}
+
+.btn-primary.facebook:hover {
+  background-color: #155d9d; /* Darker blue on hover */
+}
+
+/* Instagram Button Design */
+.btn-primary.instagram {
+  background-color: #E4405F; /* Instagram pink/red color */
+  color: white;
+  border: none;
+}
+
+.btn-primary.instagram i {
+  font-size: 20px; /* Adjust icon size */
+}
+
+.btn-primary.instagram:hover {
+  background-color: #d02f52; /* Darker pink/red on hover */
+}
+
+/* Twitter Button Design */
+.btn-primary.twitter {
+  background-color: #1DA1F2; /* Real Twitter blue color */
+  color: white;
+  border: none;
+}
+
+.btn-primary.twitter i {
+  font-size: 20px; /* Adjust icon size */
+}
+
+.btn-primary.twitter:hover {
+  background-color: #0d95e8; /* Darker blue on hover */
+}
+
+/* Adjustments for Mobile Screens */
+@media (max-width: 768px) {
+  .team-item {
+    margin-bottom: 30px;
+  }
+}
+

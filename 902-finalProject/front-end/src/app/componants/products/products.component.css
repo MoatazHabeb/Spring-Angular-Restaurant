@@ -1,0 +1,102 @@
+/* Style for the Arabic message */
+.no-products-message-ar {
+  color: red; /* Change text color */
+  font-size: 18px; /* Set font size */
+  font-family: 'Arial', sans-serif; /* Set font family */
+  text-align: center; /* Center-align text */
+  margin-top: 20px; /* Add some space on top */
+}
+
+/* Style for the English message */
+.no-products-message {
+  color: blue; /* Change text color */
+  font-size: 18px; /* Set font size */
+  font-family: 'Arial', sans-serif; /* Set font family */
+  text-align: center; /* Center-align text */
+  margin-top: 20px; /* Add some space on top */
+}
+
+.btn-custom-green {
+  background-color: #28a745; /* Bootstrap's success green */
+  border-color: #28a745;
+  color: white;
+}
+
+.btn-custom-green:hover {
+  background-color: #218838;
+  border-color: #1e7e34;
+}
+.btn btn-custom-red col-lg-6 {
+  background-color: #dc3545;
+  color: white;
+  border: 1px solid #dc3545;
+  padding: 0.25rem 0.5rem; /* Minimal padding */
+  font-size: 0.875rem;
+  white-space: nowrap; /* Prevents text wrapping */
+  display: inline-block; /* Ensures width fits content */
+  width: auto; /* Overrides any forced width */
+}
+
+.btn-not-wide:hover {
+  background-color: #c82333;
+}
+.btn-custom-dark {
+  background-color: #343a40; /* Dark gray (same as Bootstrap's dark) */
+  color: white;
+  border-color: #343a40;
+}
+
+.btn-custom-dark:hover {
+  background-color: #23272b; /* Slightly darker on hover */
+  border-color: #1d2124;
+}
+.text-primary {
+  color: #8080ff !important;
+}
+.custom-pagination .page-item.active .page-link {
+  background-color: #8080ff !important;
+  border-color: #8080ff!important;
+  color: white!important;
+}
+
+
+/* ===== Remove ALL Orange & Apply #8080ff ===== */
+.custom-pagination .ngb-pagination .page-item.active .page-link {
+  background-color: #8080ff !important;  /* Active page background */
+  border-color: #8080ff !important;      /* Active page border */
+  color: white !important;               /* Active page text */
+}
+
+.custom-pagination .ngb-pagination .page-link {
+  color: #8080ff !important;             /* Inactive pages text */
+  border-color: #dee2e6 !important;      /* Default border (non-active) */
+}
+
+.custom-pagination .ngb-pagination .page-link:hover {
+  color: #6060cc !important;             /* Hover effect (darker blue) */
+  background-color: #f8f9fa !important;  /* Optional: Slight hover bg */
+  border-color: #dee2e6 !important;      /* Keep border consistent */
+}
+
+
+.custom-pagination .pagination .page-item .page-link {
+
+  color: #4d4db3; /* Change the color of the page numbers */
+
+}
+
+
+.custom-pagination .pagination .page-item.active .page-link {
+
+  background-color: #8080ff; /* Change the background color of the active page */
+
+  color: white; /* Change the text color of the active page */
+
+}
+
+
+.custom-pagination .pagination .page-item.disabled .page-link {
+
+  color: #4d4db3; /* Change the color of disabled page links */
+
+}

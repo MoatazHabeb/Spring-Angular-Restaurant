@@ -1,0 +1,39 @@
+<div class="login-container">
+  <div class="login-card">
+    <h2 class="welcome-text">Create Account</h2>
+    <form class="login-form">
+      <div class="input-group">
+        <span class="input-icon">👤</span>
+        <input type="text" placeholder="Name" required #name>
+      </div>
+      <div class="input-group">
+        <span class="input-icon">📱</span>
+        <input type="text" placeholder="Phone Number" required #phone>
+      </div>
+      <div class="input-group">
+        <span class="input-icon">📧</span>
+        <input type="email" placeholder="Email" required #email>
+      </div>
+      <div class="input-group">
+        <span class="input-icon">🔒</span>
+        <input type="password"  (paste)="disablePaste($event)"
+               (copy)="disableCopy($event)"
+               (cut)="disableCopy($event)" placeholder="Password" required #password id="password">
+        <span class="toggle-password" (click)="togglePasswordVisibility('password')">👁️</span>
+      </div>
+      <div class="input-group">
+        <span class="input-icon">🔐</span>
+        <input type="password"  (paste)="disablePaste($event)"
+               (copy)="disableCopy($event)"
+               (cut)="disableCopy($event)" placeholder="Confirm Password" required #confirmPassword id="confirmPassword">
+        <span class="toggle-password" (click)="togglePasswordVisibility('confirmPassword')">👁️</span>
+      </div>
+      <button class="login-btn" (click)="createAccount(name.value, phone.value, email.value, password.value, confirmPassword.value)">Sign Up</button>
+    </form>
+  </div>
+</div>
+
+<p *ngIf="messageAr != ''" class="notification error notificationAr"  >{{messageAr}}</p>
+<p *ngIf="messageEn != ''" class="notification error notificationEn">{{messageEn}}</p>
+
+

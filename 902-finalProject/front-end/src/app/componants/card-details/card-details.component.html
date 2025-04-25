@@ -1,0 +1,79 @@
+<section class="ftco-section" *ngIf="order.length !== 0">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-md-6 text-center mb-4">
+        <h1 class="heading-section">Orders</h1>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-12">
+        <!--					<h3 class="h5 mb-4 text-center">Table Accordion</h3>-->
+        <div class="table-wrap">
+          <table class="table">
+            <thead class="thead-primary">
+            <tr>
+              <th>&nbsp;</th>
+              <th>&nbsp;</th>
+              <th>Product</th>
+              <th>Price</th>
+              <th>ADD</th>
+              <th>Quantity</th>
+              <th>REMOVE</th>
+              <th>total</th>
+              <th>&nbsp;</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr class="alert" role="alert" *ngFor="let or of order">
+              <td>
+                <label class="checkbox-wrap checkbox-primary">
+                </label>
+              </td>
+              <td class="widthHeight" >
+                <img class="widthHeight"  class="img" src="../../../assets/img/{{or.logoPath}}.jpg" />
+              </td>
+              <td>
+                <div class="email">
+                  <span>{{or.name}}</span>
+                  <span>{{or.description}}</span>
+                </div>
+              </td>
+              <td>${{or.price}}</td>
+              <td class="quantity">
+                <div class="input-group">
+                  <a (click)="increaseOrder(or)">
+                    <i class="fa fa-plus"></i>
+                  </a>
+                </div>
+              </td>
+              <td class="quantity">
+                <div class="input-group">
+                  <input disabled type="text" name="quantity" class="quantity form-control input-number" value="{{or.quantity}}" min="1" max="100">
+                </div>
+              </td>
+              <td class="quantity">
+                <div class="input-group">
+                  <a (click)="deCreaseOrder(or)">
+                    <i class="fa fa-minus"></i>
+                  </a>
+                </div>
+              </td>
+              <td>${{or.quantity * or.price}}</td>
+              <td>
+                <button type="button" class="close"  aria-label="Close" (click)="removeOrder(or)">
+                  X
+                </button>
+              </td>
+            </tr>
+
+            </tbody>
+          </table>
+          <button type="button" class="btn btn-success col-12" (click)="createOrder()">Take Order</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<p *ngIf="order.length === 0" class="no-order">No order Selected</p>

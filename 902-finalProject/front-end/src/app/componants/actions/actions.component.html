@@ -1,0 +1,194 @@
+<!-- AddProduct -->
+<div class="container-3 mt-5" *ngIf="isAddProductMode">
+  <h2 class="text-center-3 mb-5">Add Product</h2>
+
+  <!-- Form Container -->
+  <form (ngSubmit)="handleProductAction()" class="form-container-3 shadow-lg p-5 rounded bg-white">
+
+    <!-- Product Name -->
+    <div class="form-group-3">
+      <label for="name-3" class="form-label-3">Product Name</label>
+      <input id="name-3" class="form-control-3" [(ngModel)]="product.name" name="name" required />
+    </div>
+
+    <!-- Product Description -->
+    <div class="form-group-3">
+      <label for="description-3" class="form-label-3">Description</label>
+      <textarea id="description-3" class="form-control-3" [(ngModel)]="product.description" name="description" required></textarea>
+    </div>
+
+    <!-- Product Price -->
+    <div class="form-group-3">
+      <label for="price-3" class="form-label-3">Price</label>
+      <input id="price-3" type="number" class="form-control-3" [(ngModel)]="product.price" name="price" required />
+    </div>
+
+    <!-- Product Category -->
+    <div class="form-group-3">
+      <label for="categoryName-3" class="form-label-3">Category</label>
+      <input id="categoryName-3" class="form-control-3" [(ngModel)]="product.categoryName" name="categoryName" required />
+    </div>
+
+    <!-- Logo Image -->
+    <div class="form-group-3">
+      <label for="logoImage-3" class="form-label-3">Logo Image</label>
+      <input id="logoImage-3" type="file" class="form-control-file-3" (change)="handleProductAction($event)" />
+      <small class="form-text-3 text-muted">Image will be referenced as a path (not uploaded).</small>
+    </div>
+
+    <!-- Submit Button -->
+    <button class="btn-3 btn-primary btn-block mt-4" type="submit">Add Product</button>
+  </form>
+
+  <!-- Success Message -->
+  <div *ngIf="successMessage" class="alert-3 alert-success mt-4">
+    {{ successMessage }}
+  </div>
+
+  <!-- Error Messages -->
+  <div *ngIf="messageEn || messageAr" class="error-messages-3 mt-3">
+    <p class="error-text-3" *ngIf="messageEn">{{ messageEn }}</p>
+    <p class="error-text-3" *ngIf="messageAr">{{ messageAr }}</p>
+  </div>
+
+  <!-- General Error Message -->
+  <div *ngIf="errorMessage" class="alert-3 alert-danger mt-4">
+    {{ errorMessage }}
+  </div>
+</div>
+
+
+
+<!-- Optional: show a message if not in add mode-->
+<!--<div *ngIf="!isAddProductMode" class="container mt-4">-->
+<!--  <p class="text-muted">Not in add product mode. Navigate to the correct route to add a product.</p>-->
+<!--</div>-->
+
+<!--UpdateProduct-->
+<div class="update-form-container" *ngIf="isUpdateProductMode">
+  <form class="product-update-form" (ngSubmit)="updateProduct(formRef)" #formRef="ngForm">
+    <div class="form-field">
+      <input class="form-input" type="text" [(ngModel)]="proo.name" name="name" placeholder="Name" required />
+    </div>
+
+    <div class="form-field">
+      <input class="form-input" type="number" [(ngModel)]="proo.price" name="price" placeholder="Price" required />
+    </div>
+
+    <div class="form-field">
+      <textarea class="form-textarea" [(ngModel)]="proo.description" name="description" placeholder="Description" required></textarea>
+    </div>
+
+    <div class="form-field">
+      <input class="form-file-input" type="file" [(ngModel)]="proo.logoPath" name="logoPath" (change)="onFileSelected($event)" accept="image/*" />
+    </div>
+
+    <button class="submit-button" type="submit" [disabled]="formRef.invalid">Update Product</button>
+  </form>
+</div>
+
+
+<!--AddCategory-->
+<div *ngIf="isAddCategoryMode">
+<form class="category-form" (ngSubmit)="submitCategory()" #categoryForm="ngForm">
+  <div class="form-field">
+    <label class="form-label">Name:</label>
+    <input class="form-input" type="text" [(ngModel)]="category.name" name="name" required />
+  </div>
+
+  <div class="form-field">
+    <label class="form-label">Flag:</label>
+    <input class="form-input" type="text" [(ngModel)]="category.flag" name="flag" required />
+  </div>
+
+  <div class="form-field">
+    <label class="form-label">Logo (text):</label>
+    <input class="form-input" type="text" [(ngModel)]="category.logoPath" name="logoPath" required />
+  </div>
+
+  <button class="submit-button" type="submit" [disabled]="categoryForm.invalid">Add Category</button>
+
+  <div *ngIf="messageEn || messageAr" class="error-messages">
+    <p class="error-text" *ngIf="messageEn">{{ messageEn }}</p>
+    <p class="error-text" *ngIf="messageAr">{{ messageAr }}</p>
+  </div>
+</form>
+</div>
+
+<!-- DeleteCategory-->
+<!-- src/app/components/delete-category/delete-category.component.html -->
+
+<div class="delete-category-container" *ngIf="isDeleteCategoryMode">
+  <h2>Delete Category</h2>
+  <p>Please add the name you want to remove:</p>
+
+  <input
+    type="text"
+    [(ngModel)]="categoryName"
+    placeholder="Enter category name"
+    class="input-field"
+  />
+
+  <button (click)="deleteCategory()" class="delete-button">Delete Category</button>
+
+  <!-- Display the Arabic message -->
+  <div *ngIf="messageAr" class="error-message-ar" style="color: red">
+    {{ messageAr }}
+  </div>
+
+  <!-- Display the English message -->
+  <div *ngIf="messageEn" class="error-message-en" style="color: red">
+    {{ messageEn }}
+  </div>
+
+  <!-- Display the general message -->
+  <div *ngIf="message" class="general-message" style="color: green">
+    {{ message }}
+  </div>
+</div>
+
+
+<!--UpdateCategory-->
+<div class="update-container4" *ngIf="isUpdateCategoryMode">
+  <h2 class="update-title4">Update Category</h2>
+
+  <form (ngSubmit)="onSubmit()" class="update-form4">
+    <div class="form-group4">
+      <label for="existedName">Name of the category to update:</label>
+      <input type="text" id="existedName" [(ngModel)]="existedName" name="existedName" required />
+    </div>
+
+    <div class="form-group4">
+      <label for="name">New Name:</label>
+      <input type="text" id="name" [(ngModel)]="category2.name" name="name" required />
+    </div>
+
+    <div class="form-group4">
+      <label for="logoPath">Logo Path:</label>
+      <input type="text" id="logoPath" [(ngModel)]="category2.logoPath" name="logoPath" required />
+    </div>
+
+    <div class="form-group4">
+      <label for="flag">Flag:</label>
+      <input type="text" id="flag" [(ngModel)]="category2.flag" name="flag" required />
+    </div>
+
+    <button type="submit" class="submit-btn4">Update Category</button>
+  </form>
+
+  <!-- Messages -->
+  <div *ngIf="messageEn || messageAr" class="error-messages4">
+    <p class="error-text4" *ngIf="messageEn">{{ messageEn }}</p>
+    <p class="error-text4" *ngIf="messageAr">{{ messageAr }}</p>
+  </div>
+  <div *ngIf="successMessage" class="success-message4">{{ successMessage }}</div>
+  <div *ngIf="errorMessage" class="error-message4">{{ errorMessage }}</div>
+</div>
+
+
+
+
+
+
+
+

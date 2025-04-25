@@ -1,0 +1,63 @@
+/* Apply color to all text inside the section */
+.blue-theme {
+  color: #8080ff;
+}
+.section-title ff-secondary text-center fw-normal{
+  color: #8080ff !important;
+}
+.text-center{
+color: #8080ff !important;
+}
+.blue-text {
+  color: #8080ff;
+}
+.section-title::before,
+.section-title::after {
+  background-color: #8080ff !important;
+}
+
+/* Ensure headings, links, list items, etc. are also affected */
+.blue-theme h1,
+.blue-theme h2,
+.blue-theme h3,
+.blue-theme h4,
+.blue-theme h5,
+.blue-theme h6,
+.blue-theme p,
+.blue-theme a,
+.blue-theme span,
+.blue-theme li,
+.blue-theme label,
+.blue-theme div {
+  color: #8080ff !important;
+}
+.back-to-top {
+
+  background-color: #8080ff; /* Set the background color */
+
+  color: white; /* Set the text/icon color */
+
+  border: none; /* Remove border if any */
+
+}
+
+
+.back-to-top:hover {
+
+  background-color: #6666cc; /* Change background color on hover */
+
+  color: white; /* Keep text/icon color white on hover */
+
+}
+.spinner-border {
+
+  border-color: #8080ff !important; /* Change the border color of the spinner */
+
+}
+
+
+.spinner-border::before {
+
+  background-color: #8080ff; /* Change the background color of the spinner */
+
+}

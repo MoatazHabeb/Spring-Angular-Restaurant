@@ -1,0 +1,445 @@
+/* src/app/components/delete-category/delete-category.component.css */
+
+.delete-category-container {
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 1rem;
+  text-align: center;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+}
+
+.input-field {
+  width: 100%;
+  padding: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.delete-button {
+  background-color: #e53935;
+  color: white;
+  padding: 0.5rem 1rem;
+  border: none;
+  cursor: pointer;
+}
+
+.delete-button:hover {
+  background-color: #c62828;
+}
+
+.message {
+  margin-top: 1rem;
+  font-weight: bold;
+}
+
+/*Update Product*/
+.update-form-container {
+  max-width: 500px;
+  margin: 20px auto;
+  padding: 25px;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.product-update-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.form-field {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-input,
+.form-textarea {
+  padding: 12px 15px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  font-size: 14px;
+  transition: border-color 0.3s;
+}
+
+.form-input:focus,
+.form-textarea:focus {
+  outline: none;
+  border-color: #4a90e2;
+}
+
+.form-textarea {
+  min-height: 100px;
+  resize: vertical;
+}
+
+.form-file-input {
+  padding: 10px 0;
+}
+
+.submit-button {
+  padding: 12px;
+  background-color: #4a90e2;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.submit-button:hover {
+  background-color: #3a7bc8;
+}
+
+.submit-button:disabled {
+  background-color: #cccccc;
+  cursor: not-allowed;
+}
+
+/* Validation styles */
+.form-input.ng-invalid.ng-touched {
+  border-color: #ff6b6b;
+}
+
+/*Add Category*/
+.update-form-container {
+  max-width: 500px;
+  margin: 20px auto;
+  padding: 25px;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.product-update-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.form-field {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-label {
+  margin-bottom: 8px;
+  font-weight: 500;
+  color: #333;
+}
+
+.form-input {
+  padding: 12px 15px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  font-size: 14px;
+  transition: border-color 0.3s;
+}
+
+.form-input:focus {
+  outline: none;
+  border-color: #4a90e2;
+}
+
+.submit-button {
+  padding: 12px;
+  background-color: #4a90e2;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.submit-button:hover {
+  background-color: #3a7bc8;
+}
+
+.submit-button:disabled {
+  background-color: #cccccc;
+  cursor: not-allowed;
+}
+
+/* Validation styles */
+.form-input.ng-invalid.ng-touched {
+  border-color: #ff6b6b;
+}
+
+.error-messages {
+  margin-top: 10px;
+  padding: 10px;
+  background-color: #ffe6e6;
+  border: 1px solid red;
+  border-radius: 4px;
+}
+
+.error-text {
+  color: red;
+  margin: 0;
+  font-size: 14px;
+}
+
+
+/* Container Styling */
+.container-2 {
+  max-width: 700px;
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+/* Form Container */
+.form-container-2 {
+  background-color: #ffffff;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Form Label */
+.form-label-2 {
+  font-weight: bold;
+  margin-bottom: 8px;
+}
+
+/* Input Fields */
+.form-control-2 {
+  border-radius: 5px;
+  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
+  transition: border-color 0.3s ease;
+}
+
+.form-control-2:focus {
+  border-color: #007bff;
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+/* Submit Button */
+.container-3 {
+  max-width: 800px;
+  margin: auto;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+/* Heading */
+.text-center-3 {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #333;
+  letter-spacing: 2px;
+}
+
+/* Form Container Styling */
+.form-container-3 {
+  background-color: #f8f9fa;
+  padding: 40px;
+  border-radius: 15px;
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1);
+}
+
+/* Form Label Styling */
+.form-label-3 {
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+/* Input Fields */
+.form-control-3 {
+  border-radius: 10px;
+  padding: 12px;
+  font-size: 1.1rem;
+  border: 1px solid #ddd;
+  width: 100%;
+  margin-bottom: 20px;
+  transition: border-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.form-control-3:focus {
+  border-color: #007bff;
+  box-shadow: 0 0 10px rgba(0, 123, 255, 0.5);
+  outline: none;
+}
+
+/* Submit Button Styling */
+.btn-3 {
+  border-radius: 25px;
+  padding: 12px 30px;
+  font-size: 1.1rem;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+}
+
+.btn-primary {
+  background-color: #007bff;
+  border: none;
+  color: #fff;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.btn-primary:hover {
+  background-color: #0056b3;
+}
+
+.btn-block {
+  width: 100%;
+}
+
+/* Success and Error Messages */
+.alert-3 {
+  padding: 20px;
+  border-radius: 8px;
+  font-size: 1.1rem;
+}
+
+.alert-success {
+  background-color: #d4edda;
+  color: #155724;
+  border-color: #c3e6cb;
+}
+
+.alert-danger {
+  background-color: #f8d7da;
+  color: #721c24;
+  border-color: #f5c6cb;
+}
+
+/* Error Message Styling */
+.error-messages-3 p {
+  margin: 0;
+  font-size: 1.1rem;
+  color: #721c24;
+  font-weight: 600;
+}
+
+/* File Input Styling */
+.form-control-file-3 {
+  margin-top: 10px;
+  padding: 8px;
+  border-radius: 5px;
+  font-size: 1rem;
+}
+
+.form-text-3 {
+  font-size: 0.9rem;
+  color: #6c757d;
+  margin-top: 5px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .container-3 {
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+
+  .form-container-3 {
+    padding: 20px;
+  }
+
+  .btn-3 {
+    font-size: 1rem;
+  }
+}
+/*Update Category*/
+.update-container4 {
+  max-width: 600px;
+  margin: 40px auto;
+  background-color: #ffffff;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.update-title4 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.update-form4 {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group4 {
+  margin-bottom: 15px;
+}
+
+.form-group4 label {
+  display: block;
+  margin-bottom: 6px;
+  font-weight: 600;
+  color: #555;
+}
+
+.form-group4 input[type="text"] {
+  width: 100%;
+  padding: 10px;
+  border: 2px solid #ddd;
+  border-radius: 6px;
+  font-size: 14px;
+  transition: border-color 0.3s ease;
+}
+
+.form-group4 input[type="text"]:focus {
+  border-color: #3f51b5;
+  outline: none;
+}
+
+.submit-btn4 {
+  background-color: #3f51b5;
+  color: #fff;
+  padding: 12px;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-top: 10px;
+}
+
+.submit-btn4:hover {
+  background-color: #303f9f;
+}
+
+/* Messages */
+.error-messages4 {
+  margin-top: 20px;
+  background-color: #ffe6e6;
+  padding: 10px;
+  border-left: 5px solid #e53935;
+  border-radius: 5px;
+}
+
+.error-text4 {
+  color: #d32f2f;
+  font-size: 14px;
+  margin: 5px 0;
+}
+
+.success-message4 {
+  margin-top: 20px;
+  background-color: #e6ffe6;
+  padding: 10px;
+  border-left: 5px solid #43a047;
+  border-radius: 5px;
+  color: #2e7d32;
+  font-size: 14px;
+}
+
+.error-message4 {
+  margin-top: 20px;
+  background-color: #ffe6e6;
+  padding: 10px;
+  border-left: 5px solid #e53935;
+  border-radius: 5px;
+  color: #d32f2f;
+  font-size: 14px;
+}
+/*-------------------------Update Category----------------------------------------*/
